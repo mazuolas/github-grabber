@@ -12,4 +12,4 @@ const fs = require('fs');
 // fs.writeFile('./example.txt', 'Hello World', (err) => {
 //   console.log(err);
 // });
- console.log(process.argv);
+ // console.log(process.argv);
