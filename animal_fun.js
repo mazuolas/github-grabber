@@ -20,5 +20,6 @@ fs.readFile('./animals.txt', 'utf-8', (err, data) => {
     return;
   }
   const searchLetter = process.argv[2];
-  console.log(searchLetter);
+  const animals = data.split('\n');
+  console.log(animals);
 })
