@@ -8,3 +8,7 @@ fs.readFile('./animals.txt', 'utf-8', (err, data) => {
   console.log(data);
 
 })
+
+fs.writeFile('./example.txt', 'Hello World', (err) => {
+  console.log(err);
+});
