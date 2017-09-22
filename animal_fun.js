@@ -29,5 +29,5 @@ fs.readFile('./animals.txt', 'utf-8', (err, data) => {
   });
   fs.writeFile(`${searchLetter}_animals.txt`, returnAnimals.join('\n'), (err) =>{
     console.log(err);
-  })
-})
+  });
+});
