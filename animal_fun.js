@@ -19,5 +19,6 @@ fs.readFile('./animals.txt', 'utf-8', (err, data) => {
     console.log(err);
     return;
   }
-  console.log(data);
+  const searchLetter = process.argv[2];
+  console.log(searchLetter);
 })
