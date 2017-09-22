@@ -21,5 +21,11 @@ fs.readFile('./animals.txt', 'utf-8', (err, data) => {
   }
   const searchLetter = process.argv[2];
   const animals = data.split('\n');
-  console.log(animals);
+  let returnAnimals = [];
+  animals.forEach((animal) =>{
+    if (animal[0].toUpperCase() === searchLetter.toUpperCase()){
+      returnAnimals.push(animal);
+    }
+  });
+  console.log(returnAnimals);
 })
