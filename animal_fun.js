@@ -31,3 +31,12 @@ const fs = require('fs');
 //     console.log(err);
 //   });
 // });
+
+const http = require('http')
+
+const server = http.createServer((req, res) => {
+    res.write('hello world');
+    res.end();
+})
+
+server.listen(8000, () => console.log("I'm listening on port 8000!"))
