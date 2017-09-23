@@ -35,8 +35,10 @@ const fs = require('fs');
 const http = require('http')
 
 const server = http.createServer((req, res) => {
-    res.write('hello world');
-    res.end();
+    fs.readFile('./animals.txt', 'utf-8', (err, data) => {
+      res.write(data);
+      res.end();
+    })
 })
 
 server.listen(8000, () => console.log("I'm listening on port 8000!"))
