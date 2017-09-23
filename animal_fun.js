@@ -33,9 +33,10 @@ const fs = require('fs');
 // });
 
 const http = require('http')
-
+const querystring = require('querystring')
 const server = http.createServer((req, res) => {
     fs.readFile('./animals.txt', 'utf-8', (err, data) => {
+      console.log(querystring.parse(req.url));
       res.write(data);
       res.end();
     })
